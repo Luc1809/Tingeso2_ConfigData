@@ -1,0 +1,63 @@
+server:
+  port: 8080
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://${EUREKA:localhost}:8761/eureka
+  instance:
+    hostname: localhost
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowed-origin-patterns: '*'
+            allowed-methods: "*"
+            allowed-headers: "*"
+            allow-credentials: true
+      routes:
+        - id: Tingeso2_M1
+          uri: lb://tingeso2_m1
+          predicates:
+            - Path=/rate/**
+        - id: Tingeso2_M2
+          uri: lb://tingeso2_m2
+          predicates:
+            - Path=/groupD/**
+        - id: Tingeso2_M3
+          uri: lb://tingeso2_m3
+          predicates:
+            - Path=/fidelityD/**
+        - id: Tingeso2_M4
+          uri: lb://tingeso2_m4
+          predicates:
+            - Path=/specialD/**
+        - id: Tingeso2_M5-receipt
+          uri: lb://tingeso2_m5
+          predicates:
+            - Path=/receipt/**
+        - id: Tingeso2_M5-reservation
+          uri: lb://tingeso2_m5
+          predicates:
+            - Path=/reservation/**
+        - id: Tingeso2_M6
+          uri: lb://tingeso2_m6
+          predicates:
+            - Path=/rack/**
+        - id: Tingeso2_M7
+          uri: lb://tingeso2_m7
+          predicates:
+            - Path=/report/**
+        - id: Tingeso2_M8
+          uri: lb://tingeso2_m8
+          predicates:
+            - Path=/client/**
+        
