@@ -23,36 +23,36 @@ spring:
           uri: lb://tingeso2-m1
           predicates:
             - Path=/api/rate/**
-        - id: Tingeso2_M2
-          uri: lb://tingeso2_m2
+        - id: tingeso2-m2
+          uri: lb://tingeso2-m2
           predicates:
             - Path=/api/groupD/**
-        - id: Tingeso2_M3
-          uri: lb://tingeso2_m3
+        - id: tingeso2-m3
+          uri: lb://tingeso2-m3
           predicates:
             - Path=/api/fidelityD/**
-        - id: Tingeso2_M4
-          uri: lb://tingeso2_m4
+        - id: tingeso2-m4
+          uri: lb://tingeso2-m4
           predicates:
             - Path=/api/specialD/**
-        - id: Tingeso2_M5-receipt
-          uri: lb://tingeso2_m5
+        - id: tingeso2-m5-receipt
+          uri: lb://tingeso2-m5
           predicates:
             - Path=/api/receipt/**
-        - id: Tingeso2_M5-reservation
-          uri: lb://tingeso2_m5
+        - id: tingeso2-m5-reservation
+          uri: lb://tingeso2-m5
           predicates:
             - Path=/api/reservation/**
-        - id: Tingeso2_M6
-          uri: lb://tingeso2_m6
+        - id: tingeso2-m6
+          uri: lb://tingeso2-m6
           predicates:
             - Path=/api/rack/**
-        - id: Tingeso2_M7
-          uri: lb://tingeso2_m7
+        - id: tingeso2-m7
+          uri: lb://tingeso2-m7
           predicates:
             - Path=/api/report/**
-        - id: Tingeso2_M8
-          uri: lb://tingeso2_m8
+        - id: tingeso2-m8
+          uri: lb://tingeso2-m8
           predicates:
             - Path=/api/client/**
         
