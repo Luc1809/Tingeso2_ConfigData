@@ -19,7 +19,7 @@ spring:
           enabled: true
 
       routes:
-        - id: Tingeso2-M1
+        - id: tingeso2-m1
           uri: lb://tingeso2-m1
           predicates:
             - Path=/api/rate/**
