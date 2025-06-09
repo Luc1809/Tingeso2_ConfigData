@@ -1,6 +1,6 @@
 server:
   port: 8080
-  
+
 eureka:
   client:
     fetch-registry: true
@@ -19,8 +19,8 @@ spring:
           enabled: true
 
       routes:
-        - id: Tingeso2_M1
-          uri: lb://tingeso2_m1
+        - id: Tingeso2-M1
+          uri: lb://tingeso2-m1
           predicates:
             - Path=/api/rate/**
         - id: Tingeso2_M2
