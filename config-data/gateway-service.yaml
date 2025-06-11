@@ -19,40 +19,40 @@ spring:
           enabled: true
 
       routes:
-        - id: tingeso2-m1
-          uri: lb://tingeso2-m1
+        - id: rate-service
+          uri: lb://rate-service
           predicates:
             - Path=/api/rate/**
-        - id: tingeso2-m2
-          uri: lb://tingeso2-m2
+        - id: gdiscount-service
+          uri: lb://gdiscount-service
           predicates:
             - Path=/api/groupD/**
-        - id: tingeso2-m3
-          uri: lb://tingeso2-m3
+        - id: fdiscount-service
+          uri: lb://fdiscount-service
           predicates:
             - Path=/api/fidelityD/**
-        - id: tingeso2-m4
-          uri: lb://tingeso2-m4
+        - id: sprate-spdiscount-service
+          uri: lb://sprate-spdiscount-service
           predicates:
             - Path=/api/specialD/**
-        - id: tingeso2-m5-receipt
-          uri: lb://tingeso2-m5
+        - id: reservation-receipt-service1
+          uri: lb://reservation-receipt-service
           predicates:
             - Path=/api/receipt/**
-        - id: tingeso2-m5-reservation
-          uri: lb://tingeso2-m5
+        - id: reservation-receipt-service2
+          uri: lb://reservation-receipt-service
           predicates:
             - Path=/api/reservation/**
-        - id: tingeso2-m6
-          uri: lb://tingeso2-m6
+        - id: rack-service
+          uri: lb://rack-service
           predicates:
             - Path=/api/rack/**
-        - id: tingeso2-m7
-          uri: lb://tingeso2-m7
+        - id: report-service
+          uri: lb://report-service
           predicates:
             - Path=/api/report/**
-        - id: tingeso2-m8
-          uri: lb://tingeso2-m8
+        - id: client-service
+          uri: lb://client-service
           predicates:
             - Path=/api/client/**
         
