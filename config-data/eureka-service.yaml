@@ -1,10 +1,11 @@
 server:
   port: 8761
 eureka:
-  instance:
-    hostname: eureka-service.default.svc.cluster.local
   client:
-    fetch-registry: false
-    register-with-eureka: false
     service-url:
       defaultZone: http://eureka-service.default.svc.cluster.local:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    preferIpAddress: true
+    instance-id: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
